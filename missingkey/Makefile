@@ -8,7 +8,7 @@ run.default: ## Run 'progen'
 	@mkdir -p out
 	@progen -v -awd=out -f ../progen.yml
 
-.PHONT: run.v1.dr
+.PHONT: run.dr
 run.default.dr: ## DryRun 'progen'
 	@progen -v -dr
 

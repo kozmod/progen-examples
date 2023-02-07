@@ -1,0 +1,14 @@
+## progen.yml
+
+## `text/template` variables declaration 👇
+# {{$project_name := "SOME_PROJECT"}}
+
+## unmapped section (not `dirs`, `files`, `cmd`, `http`) can be use as template variables
+vars:
+  file_path: some/file/path
+  file_path_2: some/file/path_2
+
+dirs:
+  - api/{{$project_name}}/v1 # used from `text/template` variables
+  - internal/{{.vars.file_path}} # used from `vars` section
+  - internal/{{.vars.file_path_2}} # used overridden `vars` which set through args (-tvar=.vars.file_path 2=override path)

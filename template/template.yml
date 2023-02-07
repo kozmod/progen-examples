@@ -1,0 +1,23 @@
+## `text/template` variables declaration 👇
+# {{$project_name := "SOME_PROJECT"}}
+
+## unmapped section (not `dirs`, `files`, `cmd`, `http`) can be use as template variables
+vars:
+  file_path: some/file/path
+
+dirs:
+  - api/{{$project_name}}/v1 # used from `text/template` variables
+  - internal/{{.vars.file_path}} # used from `vars` section
+  - pkg/{{printf `%s-%s` $project_name `data`}}
+
+files:
+  - path: internal/{{$project_name}}.txt
+    data: |
+      Project name:{{$project_name}}
+  - path: pkg/{{printf `%s-%s` $project_name `data`}}/some_file.txt
+    data: |
+      {{$project_name}}
+
+cmd:
+  - exec: ["cat internal/{{$project_name}}.txt", ls -l, tree]
+    dir: .
