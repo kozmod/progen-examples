@@ -1,0 +1,12 @@
+cmd:
+  - exec:
+      - ls /
+      - sort -r
+      - wc -l
+    pipe: true
+    dir: .
+  - exec:
+      - pwd
+    dir: .
+
+
