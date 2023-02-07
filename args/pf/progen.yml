@@ -1,0 +1,14 @@
+vars:
+  file: some_data
+
+files:
+  - path: template_remote.txt
+    get:
+      url: https://raw.githubusercontent.com/kozmod/progen-examples/main/args/pf/assets/template.txt
+  - path: template_data.txt
+    data: |
+      some_data_2
+  - path: template_local.txt
+    local: ../assets/local.txt
+
+

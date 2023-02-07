@@ -1,5 +1,3 @@
-## progen.yml
-
 ## `text/template` variables declaration 👇
 # {{$project_name := "SOME_PROJECT"}}
 
