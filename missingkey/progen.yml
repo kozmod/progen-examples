@@ -1,0 +1,3 @@
+dirs:
+  - internal/{{.vars.file_path}} # used from `vars` section
+  - internal/x/{{.vars.file_path}} # used overridden `vars` which set through args (-tvar=.vars.file_path 2=override path)

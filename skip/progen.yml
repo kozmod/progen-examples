@@ -1,7 +1,9 @@
+dirs0:
+  - api/v0
 dirs:
   - api/v1
 cmd:
-  - exec: [ chmod -R 777 api/v1 ]
+  - exec: [ chmod -R 777 api/v0 ]
 dirs1:
   - api/v2
 cmd1:
