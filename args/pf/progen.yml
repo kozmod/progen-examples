@@ -4,6 +4,7 @@ vars:
 files:
   - path: template_remote.txt
     get:
+      # get a file (raw) from 'GitHub'
       url: https://raw.githubusercontent.com/kozmod/progen-examples/main/args/pf/assets/template.txt
   - path: template_data.txt
     data: |

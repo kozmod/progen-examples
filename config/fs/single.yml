@@ -1,0 +1,16 @@
+var_d: VAR_d
+var_f: VAR_f
+
+cmd:
+  - exec:
+      - cp -a ../asserts/test_dir/. ../out/
+    dir: .
+
+fs:
+  - .
+
+cmd_finish:
+  - exec:
+      - tree
+    dir: .
+
