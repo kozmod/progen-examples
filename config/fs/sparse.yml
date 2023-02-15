@@ -1,0 +1,15 @@
+var_d: VAR_d
+var_f: VAR_f
+
+cmd:
+  - git clone --depth 1  --filter=blob:none  --sparse https://github.com/kozmod/progen-examples.git  .
+  - find . -maxdepth 1 -type f -delete
+  - git config core.sparsecheckout true
+  - git sparse-checkout set  config/fs/assets
+  - cp -R config/fs/assets/ .
+  - rm -rf config
+  - rm -rf .git
+
+fs:
+  - .
+
