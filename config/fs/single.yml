@@ -3,7 +3,7 @@ var_f: VAR_f
 
 cmd:
   - exec:
-      - cp -a ../asserts/test_dir/. ../out/
+      - cp -a ../assets/test_dir/. ../out/
     dir: .
 
 fs:

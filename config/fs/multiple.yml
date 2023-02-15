@@ -3,7 +3,7 @@ var_f: VAR_f
 
 cmd:
   - exec:
-      - cp -a ../asserts/. ../out/
+      - cp -a ../assets/. ../out/
     dir: .
   - exec:
       - tree

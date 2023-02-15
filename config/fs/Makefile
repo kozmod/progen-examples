@@ -12,7 +12,7 @@ run.multiple: clean mkdir.out ## Run 'progen' with multiple 'fs'
 
 .PHONT: copy
 copy: ## Copy assets
-	@mkdir -p out && cp -a asserts/test_dir/. out/
+	@mkdir -p out && cp -a assets/test_dir/. out/
 
 .PHONT: mkdir.out
 mkdir.out: ## Create 'out' dir
@@ -21,4 +21,3 @@ mkdir.out: ## Create 'out' dir
 .PHONT: clean
 clean: ## Clean
 	@rm -rf out
-
