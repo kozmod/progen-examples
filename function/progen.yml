@@ -1,0 +1,13 @@
+files:
+  - path: "{{ random.Alpha 1 }}"
+    data: |
+      random.Alpha: {{ random.Alpha 8 }}
+      random.AlphaNum: {{ random.AlphaNum 8 }}
+      random.ASCII: {{ random.ASCII 8}}
+
+cmd:
+  - exec: bash
+    dir: .
+    args:
+      - -c
+      - cat *
