@@ -19,5 +19,6 @@ files:
       {{$project_name}}
 
 cmd:
-  - exec: ["cat internal/{{$project_name}}.txt", ls -l, tree]
-    dir: .
+  - cat internal/{{$project_name}}.txt
+  - ls -l
+  - tree

@@ -1,8 +1,8 @@
-.PHONT: run.short
-run.short: ## run 'progen'
-	@progen -v -f short.yml
+.PHONT: run
+run: ## run 'progen'
+	@progen -v
 
-.PHONT: run.short.dr
-run.short.dr: ## DryRun 'progen'
-	@progen -v -dr -f short.yml
+.PHONT: run.dr
+run.dr: ## DryRun 'progen'
+	@progen -v -dr
 

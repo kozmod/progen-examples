@@ -1,4 +1,3 @@
 cmd:
-  - exec:
-      - echo "{{ .var1 }}"
-      - echo "{{ .var2 }}"
+  - echo "{{ .var1 }}"
+  - echo "{{ .var2 }}"

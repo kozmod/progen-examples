@@ -2,11 +2,10 @@ var_d: VAR_d
 var_f: VAR_f
 
 cmd:
-  - exec:
-      - cp -a ../assets/. ../out/
+  - exec: cp
+    args: [-a, ../assets/. , ../out/]
     dir: .
-  - exec:
-      - tree
+  - exec: tree
     dir: .
 
 fs:
@@ -14,7 +13,6 @@ fs:
   - test_dir_2
 
 cmd_finish:
-  - exec:
-      - tree
+  - exec: tree
     dir: .
 

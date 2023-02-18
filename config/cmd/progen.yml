@@ -1,0 +1,17 @@
+cmd_short:
+  - pwd
+  - ls -a
+
+cmd_full:
+  - exec: bash
+    dir: ../..
+    args:
+      - -c
+      - |
+        ls -a | grep Makefile && \
+        echo xxxx  && \
+        tree
+  - tree -L 1
+  - exec: ls
+    args: [ -lh ]
+    dir: /

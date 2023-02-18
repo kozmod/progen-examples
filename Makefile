@@ -3,8 +3,12 @@ version: ## Print 'progen' version
 	progen --version
 
 .PHONT: install
-install: ## Install 'progen' from github
-	go install github.com/kozmod/progen@latest
+install: ## Install latest 'progen' version from github
+	@make install_v v="latest"
+
+.PHONT: install_v
+install_v: ## Install specific 'progen' version from github (example: make install_v v="v0.0.1")
+	go install github.com/kozmod/progen@$(v)
 
 .PHONY: list
 list: ## List all make targets
