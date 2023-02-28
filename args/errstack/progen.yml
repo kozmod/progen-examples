@@ -1,0 +1,18 @@
+var_d: VAR_d
+var_f: VAR_f
+
+cmd:
+  - exec: cp
+    args: [-a, ../assets/. , ../out/]
+    dir: .
+  - exec: tree
+    dir: .
+
+fs:
+  - test_dir
+  - test_dir_2
+
+cmd_finish:
+  - exec: tree
+    dir: .
+
