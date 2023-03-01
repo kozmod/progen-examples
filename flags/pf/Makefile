@@ -1,20 +1,20 @@
 .PHONT: run.pf
-run.pf: clean ## Run 'progen': -pf=true (default)
+run.pf: clean ## Run cli: -pf=true (default)
 	@mkdir -p out
 	@progen -v -awd=out -f ../progen.yml
 
 .PHONT: run.pf.dr
-run.pf.dr: ## DryRun 'progen': -pf=true (default)
+run.pf.dr: ## DryRun cli: -pf=true (default)
 	@mkdir -p out
 	@progen -v -awd=out -dr -f ../progen.yml
 
 .PHONT: run.pf.false
-run.pf.false: clean ## Run 'progen': -pf=false
+run.pf.false: clean ## Run cli: -pf=false
 	@mkdir -p out
 	@progen -v -awd=out -pf=false -f ../progen.yml
 
 .PHONT:run.pf.false.dr
-run.pf.false.dr: ## Run 'progen': -pf=false
+run.pf.false.dr: ## Run cli: -pf=false
 	@mkdir -p out
 	@progen -v -awd=out -dr -f ../progen.yml
 
