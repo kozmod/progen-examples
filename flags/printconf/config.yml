@@ -1,0 +1,12 @@
+vars:
+  some_data: VARS_SOME_DATA
+
+# {{- $var_1 := random.AlphaNum 15}}
+#  {{- $var_2 := "echo some_%s"}}
+cmd:
+  - echo {{ $$var_1 }}
+  - "{{ printf $var_2  `value` }}"
+  - echo {{ .vars.some_data }}
+
+
+
