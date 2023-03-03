@@ -1,14 +1,14 @@
 .PHONT: run
-run: clean mkdir.out ## run 'progen'
-	@progen -v -awd=out -f ../progen.yml
+run: clean mkdir.out ## Run cli
+	@progen -v -awd=out -f ../config.yml
 
 .PHONT: run.dr
-run.dr: ## DryRun 'progen'
-	@progen -v -dr
+run.dr: ## DryRun cli
+	@progen -v -dr -f config.yml
 
 .PHONT: mkdir.out
 mkdir.out: ## Create 'out' dir
-	@mkdir -p out
+	@mkdir -p out 
 
 .PHONT: clean
 clean: ## Clean
