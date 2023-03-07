@@ -1,0 +1,4 @@
+cmd:
+  - exec: tree
+    dir: .
+
