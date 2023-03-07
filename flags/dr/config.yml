@@ -1,0 +1,12 @@
+## progen.yml
+
+# {{$project_name := "SOME_PROJECT"}}
+dirs:
+  - api/{{ $project_name }}/v1
+cmd:
+  - chmod -R 777 api/v1
+
+files:
+  - path: api/v1/some_file.txt
+    data: |
+      some file data data fot project: {{ $project_name }}
