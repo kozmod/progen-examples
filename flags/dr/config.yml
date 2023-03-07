@@ -4,7 +4,7 @@
 dirs:
   - api/{{ $project_name }}/v1
 cmd:
-  - chmod -R 777 api/v1
+  - tree
 
 files:
   - path: api/v1/some_file.txt
